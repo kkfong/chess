@@ -177,7 +177,7 @@ play.clickMan = function (key,x,y){
 			com.pane.isShow = false;
 			com.dot.dots = [];
 			com.show()
-			com.get("clickAudio").play();
+
 			setTimeout("play.AIPlay()",500);
 			if (key == "j0") play.showWin (-1);
 			if (key == "J0") play.showWin (1);
@@ -192,8 +192,6 @@ play.clickMan = function (key,x,y){
 			com.mans[key].ps = com.mans[key].bl(); //获得所有能着点
 			com.dot.dots = com.mans[key].ps
 			com.show();
-			//com.get("selectAudio").start(0);
-			com.get("selectAudio").play();
 		}
 	}
 }
@@ -216,7 +214,7 @@ play.clickPoint = function (x,y){
 			play.nowManKey = false;
 			com.dot.dots = [];
 			com.show();
-			com.get("clickAudio").play();
+
 			setTimeout("play.AIPlay()",500);
 		}else{
 			//alert("不能这么走哦！")	
@@ -244,7 +242,6 @@ play.AIPlay = function (){
 	}else {
 		play.AIclickPoint(pace[2],pace[3]);	
 	}
-	com.get("clickAudio").play();
 	
 	
 }
